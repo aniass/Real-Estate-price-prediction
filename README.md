@@ -1,3 +1,14 @@
 # Real Estate price prediction
 
-The real estate price prediction with linear regression model.
+
+## General info
+This project contains real estate price prediction with linear regression model. We use the common linear regression models (Ridge, Lasso, ElasticNet), Random Forest, Gradient Descsent and XGBoosts models to solve our problem. The dataset comes from Kaggle and can be find [here](https://www.kaggle.com/quantbruce/real-estate-price-prediction).
+
+## Technologies
+
+The project is created with:
+
+- Python 3.6
+- libraries: pandas, numpy, sklearn, seaborn, matplotlib.
+
+To run this project use Jupyter Notebook or Google Colab.
