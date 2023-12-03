@@ -15,6 +15,7 @@ URL_DATA = r'\data\Real_estate.csv'
 
 
 def rename_columns(df):
+    '''Rename columns in DataFrame'''
     df.rename(columns={
         'X2 house age': 'house age',
         'X3 distance to the nearest MRT station': 'nearest_station',
@@ -27,20 +28,21 @@ def rename_columns(df):
 
 
 def clean_data(df):
+    '''Function to clean data and drop unnecessary columns'''
     df.drop(['No', 'X1 transaction date'],axis=1,inplace=True)
     data = rename_columns(df)
     return data
 
 
 def read_data(path):
-    """Function to read text data"""
+    '''Function to read text data'''
     df = pd.read_csv(path, encoding = 'unicode_escape')
     df = clean_data(df)
     return df
 
 
 def splitting_data(df, test_size=0.2, random_state=0):
-    ''' Function to split data on train and test set '''
+    ''' Function to split data on train and test set'''
     X = df.drop(columns='house price')
     y = df.loc[:, 'house price']
     X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=test_size, random_state=random_state)
@@ -48,7 +50,7 @@ def splitting_data(df, test_size=0.2, random_state=0):
 
 
 def scores(model, X_test, y_test):
-    """Calculate R-squared and RMSE scores for the model"""
+    '''Function to calculate R-squared and RMSE scores for the models'''
     pred = model.predict(X_test)
     r_squared = round(r2_score(y_test, pred), 2)
     rmse = round(np.sqrt(mean_squared_error(y_test,pred)), 2)
