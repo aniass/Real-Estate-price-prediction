@@ -24,8 +24,7 @@ def clean_data(path):
     return data
 
 
-
 if __name__ == '__main__':
     data = clean_data(URL_DATA)
-    data.to_csv('C:\Python Scripts\Projects_done\Real_estate_regression\prices_clean4.csv', index=False)
+    data.to_csv('data\prices_clean.csv', index=False)
     print(data)
