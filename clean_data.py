@@ -5,6 +5,7 @@ URL_DATA = r'data\Real_estate.csv'
 
 
 def rename_columns(df1):
+    '''Rename columns in DataFrame'''
     df1.rename(columns={
         'X2 house age': 'house age',
         'X3 distance to the nearest MRT station': 'nearest_station',
