@@ -18,7 +18,7 @@ def rename_columns(df1):
 
 
 def clean_data(path):
-    """Function to read and clean data"""
+    '''Function to read and clean data'''
     df = pd.read_csv(path, encoding = 'unicode_escape')
     df.drop(['No', 'X1 transaction date'],axis=1,inplace=True)
     data = rename_columns(df)
