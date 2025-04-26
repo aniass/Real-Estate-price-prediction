@@ -56,15 +56,11 @@ def tune_random_forest_model(X_train, y_train):
 
 def evaluate_model(model, X_test, y_test):
     predictions = model.predict(X_test)
-    print("r2_score:",r2_score(y_test, predictions))
-    #Root mean squared error(RMSE)
-    print("RMSE",np.sqrt(mean_squared_error(y_test, predictions)))
-    #Mean absolute error(MAE)
-    print('MAE',metrics.mean_absolute_error(y_test, predictions))
-    #Mean squared error(MSE)
-    print('MSE',metrics.mean_squared_error(y_test, predictions))
-
-
+    print("R^2 Score:", r2_score(y_test, predictions))
+    print("Root Mean Squared Error (RMSE):", np.sqrt(mean_squared_error(y_test, predictions)))
+    print("Mean Absolute Error (MAE):", metrics.mean_absolute_error(y_test, predictions))
+    print("Mean Squared Error (MSE):", metrics.mean_squared_error(y_test, predictions))
+ 
 
 if __name__ == '__main__':
     df = read_data(URL_DATA)
