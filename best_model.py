@@ -1,7 +1,7 @@
 """
 Real Estate price prediction - best model script.
-Hyperparameter tuning of Random Forest model
- """
+Hyperparameter tuning of Random Forest model.
+"""
 
 import pandas as pd
 import numpy as np
