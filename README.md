@@ -8,7 +8,8 @@ The dataset comes from Kaggle and can be find [here](https://www.kaggle.com/quan
 
 ### Project contains:
 - Real estate price prediction with linear regression models - **Real_estate_regression.ipynb**
-- Python script with price predictions models - **prices_model.py**
+- Python scripts with price predictions models - **prices_model.py, best_model.py**
+- Python script to clean data - **clean_data.py**
 
 ### Technologies
 The project is created with:
@@ -21,4 +22,6 @@ To run this project use Jupyter Notebook or Google Colab.
 
 You can run the scripts in the terminal:
 
+    clean_data.py
     prices_model.py
+    best_model.py
